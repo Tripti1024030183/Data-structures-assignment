@@ -1,0 +1,62 @@
+// matrix multiplication
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int m,n, p,q;
+    int A[10][10],B[10][10],C[10][10];
+    
+    //first matrix
+    cout<<"enter no of m rows and n columns";
+    cin>>m>>n;
+    cout<<"enter the elements:";
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>A[i][j];
+        }
+    }
+     //second matrix
+    cout<<"enter no of p rows and q columns";
+    cin>>p>>q;
+    cout<<"enter the elements:";
+    if(n!=p)
+    {
+        cout<<"invalid matrix multiplication";
+    }
+    else
+    {
+      for(int i=0;i<p;i++)
+    {
+        for(int j=0;j<q;j++)
+        {
+            cin>>B[i][j];
+        }
+    }  
+    }
+    //matrix multiplication
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<q;j++)
+        {
+            C[i][j]=0;
+            for(int k=0;k<n;k++)
+            {
+                C[i][j]+=A[i][k]*B[k][j];
+            }
+        }
+    }
+    //display
+    cout << "Resultant Matrix after multiplication:\n";
+    for(int i=0;i<m; i++)
+    {
+        for(int j=0;j<q;j++)
+        {
+            cout << C[i][j]<<" ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
