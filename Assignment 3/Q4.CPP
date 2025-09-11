@@ -4,7 +4,6 @@ using namespace std;
 // Function to return precedence of operators 
 int precedence(char c) 
 { 
-} 
 if (c == '^') 
 return 3; 
 else if (c == '/' || c == '*') 
@@ -13,6 +12,8 @@ else if (c == '+' || c == '-')
 return 1; 
 else 
 return -1; 
+} 
+
 void infixToPostfix(string s) 
 { 
  
@@ -64,3 +65,4 @@ int main()
  
  return 0; 
 } 
+
