@@ -1,26 +1,25 @@
 #include<iostream>
 using namespace std;
 
-int main() {
-    int n;
-    cout<<"Enter size of array: ";
+int main(){
+    int i,j,n;
+    
+    cout<<"enter the size of matix";
     cin>>n;
     int arr[n];
     
-    cout<<"Enter elements: ";
-    for(int i=0;i<n;i++)
+    cout<<"enter the element of array:";
+    for( i=0;i<n;i++){
         cin>>arr[i];
-    
-    int count=0;
-    for(int i=0;i<n-1;i++) {
-        for(int j=i+1;j<n;j++) {
-            if(arr[i]>arr[j]) {
-                count++;
-                cout<<"Inversion: ("<<arr[i]<<", "<<arr[j]<<")\n";
-            }
-        }
     }
-    
-    cout<<"Total Inversions = "<<count;
-    return 0;
+    int count=0;
+         for( i=0;i<n;i++){
+        for(j=i+1;j<n;j++){
+         if( arr[i]>arr[j]){
+             count++;
+         }
+        }
+        cout<<endl;
+    }
+    cout<<"no of inversions:"<<count<<endl;
 }
