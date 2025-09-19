@@ -21,7 +21,7 @@ class Stack{
             cout<<"stack overflow"<<endl; 
         } 
         else{ 
-            element[++top]=-x; 
+            element[++top]=x; 
             cout<<x <<" pushed into stack"<<endl; 
         } 
     } 
@@ -31,8 +31,9 @@ class Stack{
          } 
          else 
         { 
-            cout<<element[top--]<<" popped from stack"<<endl; 
+            cout<<element[top]<<" popped from stack"<<endl; 
         } 
+top--;
      } 
       
      void peek(){ 
@@ -72,3 +73,4 @@ int main(){
     cout<<(S.isEmpty()? "stack is empty":"stack is not empty")<<endl; 
     cout<<(S.isFull()? "stack is full":"stack is not full")<<endl; 
 return 0;}
+
